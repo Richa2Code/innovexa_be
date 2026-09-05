@@ -12,6 +12,8 @@ class SuccessMessage:
     COUNTRIES_FETCHED_SUCCESSFULLY = "Countries Fetched Successfully"
     STATES_FETCHED_SUCCESSFULLY = "States Fetched Successfully"
     DISTRICTS_FETCHED_SUCCESSFULLY = "Districts Fetched Successfully"
+    SCHEMES_FETCHED_SUCCESSFULLY = "Schemes Fetched Successfully"
+    SCHEME_DETAILS_FETCHED_SUCCESSFULLY = "Scheme Details Fetched Successfully"
 
 
 class ErrorMessage:
@@ -27,6 +29,8 @@ class ErrorMessage:
     OTP_INVALID = "OTP Invalid!"
     COUNTRY_ID_REQUIRED = "Country ID is Required"
     STATE_ID_REQUIRED = "State ID is Required"
+    SCHEME_NOT_FOUND = "Scheme Not Found!"
+
 
 
 class LoggerMessage:

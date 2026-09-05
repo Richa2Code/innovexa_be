@@ -1,0 +1,25 @@
+from typing import Optional
+from fastapi import APIRouter, Request, Depends, Query, status as http_status
+from app.db.session import get_db
+from app.services.public_service import PublicService
+
+router = APIRouter(
+    prefix="/public"
+)
+
+@router.get("/countries")
+def list_country(request: Request, db = Depends(get_db)):
+    service = PublicService(request, db)
+    return service.list_countries()
+
+
+@router.get("/states")
+def list_states(request: Request, country_id: Optional[str] = Query(None), db = Depends(get_db)):
+    service = PublicService(request, db)
+    return service.list_states(country_id=country_id)
+
+
+@router.get("/districts")
+def list_districts(request: Request, state_id: Optional[str] = Query(None), db = Depends(get_db)):
+    service = PublicService(request, db)
+    return service.list_districts(state_id=state_id)

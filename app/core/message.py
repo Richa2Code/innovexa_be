@@ -9,6 +9,9 @@ class SuccessMessage:
     USER_REGISTERED_SUCCESSFULLY = "User Registered Successfully!"
     USER_VERIFICATION_EMAIL_SEND = "User Verification Email Sent"
     USER_OTP_VERIFIED_SUCCESSFULLY = "User OTP Verified Successfully"
+    COUNTRIES_FETCHED_SUCCESSFULLY = "Countries Fetched Successfully"
+    STATES_FETCHED_SUCCESSFULLY = "States Fetched Successfully"
+    DISTRICTS_FETCHED_SUCCESSFULLY = "Districts Fetched Successfully"
 
 
 class ErrorMessage:
@@ -22,7 +25,10 @@ class ErrorMessage:
     USER_ALREADY_VERIFIED = "User Already Verified"
     OTP_EXPIRED = "OTP Expired!"
     OTP_INVALID = "OTP Invalid!"
+    COUNTRY_ID_REQUIRED = "Country ID is Required"
+    STATE_ID_REQUIRED = "State ID is Required"
 
 
 class LoggerMessage:
     ExpiredSignatureError_Logtext = "user_id :: {user_id} & error :: {e}"
+

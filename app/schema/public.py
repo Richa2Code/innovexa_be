@@ -27,9 +27,11 @@ class DistrictResponse(BaseModel):
 
 class SchemeEligibilityRequest(BaseModel):
     project_cost: Optional[float] = None
+    annual_income: Optional[float] = None
     category: Optional[str] = None
     state_id: Optional[str] = None
     district_id: Optional[str] = None
+
 
 
 class RepaymentRuleResponse(BaseModel):
@@ -80,4 +82,34 @@ class SchemeListItemResponse(BaseModel):
 class SchemeDetailResponse(SchemeListItemResponse):
     repayment_rules: List[RepaymentRuleResponse] = []
     channel_partners: List[ChannelPartnerResponse] = []
+
+
+class EMICalculatorRequest(BaseModel):
+    loan_amount: float
+    interest_rate: Optional[float] = None
+    tenure_months: int
+    moratorium_months: Optional[int] = None
+    scheme_id: Optional[str] = None
+
+
+class EMIScheduleBreakdown(BaseModel):
+    month: int
+    beginning_balance: float
+    emi: float
+    principal_paid: float
+    interest_paid: float
+    ending_balance: float
+
+
+class EMICalculatorResponse(BaseModel):
+    loan_amount: float
+    annual_interest_rate: float
+    tenure_months: int
+    moratorium_months: int
+    monthly_emi: float
+    total_interest_payable: float
+    total_payment: float
+    schedule: List[EMIScheduleBreakdown] = []
+
+
 

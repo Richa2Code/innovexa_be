@@ -20,7 +20,11 @@ from app.schema.public import (
     SchemeDetailResponse,
     RepaymentRuleResponse,
     ChannelPartnerResponse,
+    EMICalculatorRequest,
+    EMICalculatorResponse,
+    EMIScheduleBreakdown,
 )
+
 
 logger = get_logger(__name__)
 
@@ -108,10 +112,12 @@ class PublicService:
         try:
             schemes = self.scheme_repo.get_eligible_schemes(
                 project_cost=payload.project_cost,
+                annual_income=payload.annual_income,
                 category=payload.category,
                 state_id=payload.state_id,
                 district_id=payload.district_id,
             )
+
 
             results = []
             for scheme in schemes:
@@ -178,6 +184,143 @@ class PublicService:
             raise
         except Exception as e:
             raise ServerException(str(e))
+
+    # Method: Calculate Scheme EMI
+    def calculate_emi(self, payload: EMICalculatorRequest):
+        try:
+            loan_amount = payload.loan_amount
+            if loan_amount <= 0:
+                raise HTTPException(
+                    status_code=http_status.HTTP_400_BAD_REQUEST,
+                    detail=ErrorMessage.INVALID_LOAN_AMOUNT,
+                )
+
+            tenure_months = payload.tenure_months
+            if tenure_months <= 0:
+                raise HTTPException(
+                    status_code=http_status.HTTP_400_BAD_REQUEST,
+                    detail=ErrorMessage.INVALID_TENURE,
+                )
+
+            annual_interest_rate = payload.interest_rate
+            moratorium_months = payload.moratorium_months
+            target_scheme = None
+
+            if payload.scheme_id:
+                target_scheme = self.scheme_repo.get(payload.scheme_id)
+                if not target_scheme and (annual_interest_rate is None or moratorium_months is None):
+                    raise HTTPException(
+                        status_code=http_status.HTTP_404_NOT_FOUND,
+                        detail=ErrorMessage.SCHEME_NOT_FOUND,
+                    )
+
+            # If interest_rate is not provided, try fetching from scheme
+            if annual_interest_rate is None and target_scheme:
+                if target_scheme.beneficiary_interest_rate is not None:
+                    annual_interest_rate = float(target_scheme.beneficiary_interest_rate)
+                elif target_scheme.nsfdc_interest_rate is not None:
+                    annual_interest_rate = float(target_scheme.nsfdc_interest_rate)
+
+            if annual_interest_rate is None or annual_interest_rate < 0:
+                raise HTTPException(
+                    status_code=http_status.HTTP_400_BAD_REQUEST,
+                    detail=ErrorMessage.INTEREST_RATE_REQUIRED,
+                )
+
+            # Extract moratorium_months from scheme repayment rules if not provided
+            if moratorium_months is None:
+                moratorium_months = 0
+                if target_scheme and target_scheme.repayment_rules:
+                    import re
+                    for rule in target_scheme.repayment_rules:
+                        if rule.moratorium_period:
+                            match = re.search(r"\d+", str(rule.moratorium_period))
+                            if match:
+                                moratorium_months = int(match.group(0))
+                                break
+
+            if moratorium_months >= tenure_months:
+                raise HTTPException(
+                    status_code=http_status.HTTP_400_BAD_REQUEST,
+                    detail="Moratorium period cannot be equal to or greater than loan tenure",
+                )
+
+            repayment_tenure = tenure_months - moratorium_months
+
+            # EMI Calculation for active repayment period
+            if annual_interest_rate == 0:
+                monthly_emi = round(loan_amount / repayment_tenure, 2)
+                monthly_rate = 0.0
+            else:
+                monthly_rate = (annual_interest_rate / 100) / 12
+                emi_val = (
+                    loan_amount
+                    * monthly_rate
+                    * ((1 + monthly_rate) ** repayment_tenure)
+                    / (((1 + monthly_rate) ** repayment_tenure) - 1)
+                )
+                monthly_emi = round(emi_val, 2)
+
+            # Build monthly schedule
+            schedule = []
+            balance = float(loan_amount)
+            total_payment = 0.0
+
+            for m in range(1, tenure_months + 1):
+                if m <= moratorium_months:
+                    interest_paid = round(balance * monthly_rate, 2)
+                    principal_paid = 0.0
+                    current_emi = interest_paid
+                    ending_balance = balance
+                else:
+                    interest_paid = round(balance * monthly_rate, 2)
+                    if m == tenure_months:
+                        principal_paid = balance
+                        current_emi = round(principal_paid + interest_paid, 2)
+                    else:
+                        principal_paid = round(monthly_emi - interest_paid, 2)
+                        current_emi = monthly_emi
+
+                    ending_balance = max(0.0, round(balance - principal_paid, 2))
+
+                schedule.append(
+                    EMIScheduleBreakdown(
+                        month=m,
+                        beginning_balance=balance,
+                        emi=current_emi,
+                        principal_paid=principal_paid,
+                        interest_paid=interest_paid,
+                        ending_balance=ending_balance,
+                    )
+                )
+                total_payment += current_emi
+                balance = ending_balance
+
+            total_payment = round(total_payment, 2)
+            total_interest_payable = round(total_payment - loan_amount, 2)
+
+            response_data = EMICalculatorResponse(
+                loan_amount=loan_amount,
+                annual_interest_rate=annual_interest_rate,
+                tenure_months=tenure_months,
+                moratorium_months=moratorium_months,
+                monthly_emi=monthly_emi,
+                total_interest_payable=total_interest_payable,
+                total_payment=total_payment,
+                schedule=schedule,
+            ).model_dump()
+
+            return success_response(
+                status_code=http_status.HTTP_200_OK,
+                msg=SuccessMessage.EMI_CALCULATED_SUCCESSFULLY,
+                data=response_data,
+            )
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise ServerException(str(e))
+
+
 
 
     

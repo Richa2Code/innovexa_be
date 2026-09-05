@@ -1,7 +1,7 @@
 from typing import Optional
 from fastapi import APIRouter, Request, Depends, Query, status as http_status
 from app.db.session import get_db
-from app.schema.public import SchemeEligibilityRequest
+from app.schema.public import SchemeEligibilityRequest, EMICalculatorRequest
 from app.services.public_service import PublicService
 
 router = APIRouter(
@@ -46,4 +46,15 @@ def get_scheme_details(
 ):
     service = PublicService(request, db)
     return service.get_scheme_details(scheme_id=scheme_id, state_id=state_id, district_id=district_id)
+
+
+@router.post("/schemes/emi-calculator")
+def calculate_scheme_emi(
+    request: Request,
+    payload: EMICalculatorRequest,
+    db = Depends(get_db),
+):
+    service = PublicService(request, db)
+    return service.calculate_emi(payload)
+
 

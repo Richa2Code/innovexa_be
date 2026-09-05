@@ -227,17 +227,35 @@ class PublicService:
                     detail=ErrorMessage.INTEREST_RATE_REQUIRED,
                 )
 
-            # Extract moratorium_months from scheme repayment rules if not provided
+            # Extract max tenure and moratorium_months from scheme repayment rules if scheme_id is provided
+            max_tenure_months = None
             if moratorium_months is None:
                 moratorium_months = 0
-                if target_scheme and target_scheme.repayment_rules:
-                    import re
-                    for rule in target_scheme.repayment_rules:
-                        if rule.moratorium_period:
-                            match = re.search(r"\d+", str(rule.moratorium_period))
-                            if match:
-                                moratorium_months = int(match.group(0))
-                                break
+
+            if target_scheme and target_scheme.repayment_rules:
+                import re
+                for rule in target_scheme.repayment_rules:
+                    if max_tenure_months is None and rule.max_repayment_period:
+                        rule_str = str(rule.max_repayment_period).lower()
+                        match = re.search(r"(\d+)\s*(year|month)?", rule_str)
+                        if match:
+                            num = int(match.group(1))
+                            unit = match.group(2)
+                            if unit and "year" in unit:
+                                max_tenure_months = num * 12
+                            else:
+                                max_tenure_months = num
+
+                    if payload.moratorium_months is None and rule.moratorium_period:
+                        match = re.search(r"\d+", str(rule.moratorium_period))
+                        if match:
+                            moratorium_months = int(match.group(0))
+
+            if max_tenure_months is not None and tenure_months > max_tenure_months:
+                raise HTTPException(
+                    status_code=http_status.HTTP_400_BAD_REQUEST,
+                    detail=f"Tenure cannot exceed maximum repayment period of {max_tenure_months} months for this scheme",
+                )
 
             if moratorium_months >= tenure_months:
                 raise HTTPException(

@@ -33,10 +33,14 @@ class SchemeRepository(BaseRepository[Scheme]):
     def get_eligible_schemes(
         self,
         project_cost: Optional[float] = None,
+        annual_income: Optional[float] = None,
         category: Optional[str] = None,
         state_id: Optional[str] = None,
         district_id: Optional[str] = None,
     ) -> List[Scheme]:
+        if annual_income is not None and annual_income > 500000:
+            return []
+
         query = self.db.query(Scheme).filter(
             Scheme.is_active == True,
             Scheme.is_deleted == False,
@@ -60,6 +64,7 @@ class SchemeRepository(BaseRepository[Scheme]):
             query = query.distinct()
 
         return query.all()
+
 
 # SchemeRepaymentRule Repository
 class SchemeRepaymentRuleRepository(BaseRepository[SchemeRepaymentRule]):

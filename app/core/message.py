@@ -14,6 +14,7 @@ class SuccessMessage:
     DISTRICTS_FETCHED_SUCCESSFULLY = "Districts Fetched Successfully"
     SCHEMES_FETCHED_SUCCESSFULLY = "Schemes Fetched Successfully"
     SCHEME_DETAILS_FETCHED_SUCCESSFULLY = "Scheme Details Fetched Successfully"
+    EMI_CALCULATED_SUCCESSFULLY = "EMI Calculated Successfully"
 
 
 class ErrorMessage:
@@ -30,6 +31,10 @@ class ErrorMessage:
     COUNTRY_ID_REQUIRED = "Country ID is Required"
     STATE_ID_REQUIRED = "State ID is Required"
     SCHEME_NOT_FOUND = "Scheme Not Found!"
+    INVALID_LOAN_AMOUNT = "Loan Amount must be greater than 0"
+    INVALID_TENURE = "Tenure must be greater than 0"
+    INTEREST_RATE_REQUIRED = "Interest rate is required or scheme must specify an interest rate"
+
 
 
 

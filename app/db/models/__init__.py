@@ -3,3 +3,10 @@ from app.db.models.user import User
 from app.db.models.user_session import UserSession
 from app.db.models.user_information import UserInformation
 from app.db.models.role import Role
+from app.db.models.country import Country
+from app.db.models.state import State
+from app.db.models.district import District
+from app.db.models.scheme import Scheme
+from app.db.models.channel_partner import ChannelPartner
+from app.db.models.scheme_repayment_rule import SchemeRepaymentRule
+from app.db.models.scheme_channel_partner import SchemeChannelPartner

@@ -12,3 +12,5 @@ python-multipart>=0.0.9
 colorlog>=6.8.0
 email-validator>=2.1.1
 fastapi-response-handler>=0.1.0
+httpx>=0.27.0
+pytest>=8.0.0

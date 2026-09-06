@@ -30,6 +30,15 @@ class Settings(BaseSettings):
     BREVO_SENDER_EMAIL: str = "noreply@example.com"
     BREVO_SENDER_NAME: str = "Innovexa"
 
+    # CORS Configuration
+    CORS_ORIGINS: list[str] = [
+        "https://scheme-setu-ai.netlify.app",
+        "https://scheme-setu-ai.netlify.app/",
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:5173",
+    ]
+
     model_config = {
         "env_file": ".env",
         "extra": "ignore",

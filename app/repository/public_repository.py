@@ -30,6 +30,30 @@ class SchemeRepository(BaseRepository[Scheme]):
     def __init__(self, db: Session):
         super().__init__(Scheme, db)
 
+    def get_all_schemes(
+        self,
+        skip: int = 0,
+        limit: int = 100,
+        category: Optional[str] = None,
+        search: Optional[str] = None,
+    ) -> List[Scheme]:
+        query = self.db.query(Scheme).filter(
+            Scheme.is_active == True,
+            Scheme.is_deleted == False,
+        )
+
+        if category:
+            query = query.filter(Scheme.category.ilike(f"%{category}%"))
+
+        if search:
+            query = query.filter(
+                Scheme.name.ilike(f"%{search}%") |
+                Scheme.purpose.ilike(f"%{search}%") |
+                Scheme.description.ilike(f"%{search}%")
+            )
+
+        return query.offset(skip).limit(limit).all()
+
     def get_eligible_schemes(
         self,
         project_cost: Optional[float] = None,

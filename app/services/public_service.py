@@ -107,6 +107,35 @@ class PublicService:
         except Exception as e:
             raise ServerException(str(e))
 
+    # Method: List All Schemes
+    def list_schemes(
+        self,
+        skip: int = 0,
+        limit: int = 100,
+        category: Optional[str] = None,
+        search: Optional[str] = None,
+    ):
+        try:
+            schemes = self.scheme_repo.get_all_schemes(
+                skip=skip,
+                limit=limit,
+                category=category,
+                search=search,
+            )
+            results = [
+                SchemeListItemResponse.model_validate(scheme).model_dump()
+                for scheme in schemes
+            ]
+            return success_response(
+                status_code=http_status.HTTP_200_OK,
+                msg=SuccessMessage.SCHEMES_FETCHED_SUCCESSFULLY,
+                data=results,
+            )
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise ServerException(str(e))
+
     # Method: Get Eligible Schemes
     def get_eligible_schemes(self, payload: SchemeEligibilityRequest):
         try:

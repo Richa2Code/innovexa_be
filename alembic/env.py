@@ -11,7 +11,8 @@ from app.db.models import Base
 config = context.config
 
 # Dynamically set database URL from app settings
-config.set_main_option("sqlalchemy.url", "postgresql://postgres:Vraj%%40123@localhost:5432/innovexa_db")
+# config.set_main_option("sqlalchemy.url", "postgresql://postgres:Vraj%%40123@localhost:5432/innovexa_db") # Local
+config.set_main_option("sqlalchemy.url", "postgresql://innovexa_db_user:d5JOceYYiKW3ZL2lf7Ds5Kv92MlPTK1b@dpg-daeibt0n74is73e04ek0-a.oregon-postgres.render.com/innovexa_db")
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)

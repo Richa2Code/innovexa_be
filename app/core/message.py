@@ -15,6 +15,7 @@ class SuccessMessage:
     SCHEMES_FETCHED_SUCCESSFULLY = "Schemes Fetched Successfully"
     SCHEME_DETAILS_FETCHED_SUCCESSFULLY = "Scheme Details Fetched Successfully"
     EMI_CALCULATED_SUCCESSFULLY = "EMI Calculated Successfully"
+    CHANNEL_PARTNERS_FETCHED_SUCCESSFULLY = "Channel Partners Fetched Successfully"
 
 
 class ErrorMessage:

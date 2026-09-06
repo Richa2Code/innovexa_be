@@ -110,6 +110,40 @@ class ChannelPartnerRepository(BaseRepository[ChannelPartner]):
     def __init__(self, db: Session):
         super().__init__(ChannelPartner, db)
 
+    def get_channel_partners(
+        self,
+        country_id: Optional[str] = None,
+        state_id: Optional[str] = None,
+        district_id: Optional[str] = None,
+        scheme_id: Optional[str] = None,
+    ) -> List[ChannelPartner]:
+        query = self.db.query(ChannelPartner).filter(
+            ChannelPartner.is_active == True,
+            ChannelPartner.is_deleted == False,
+        )
+
+        if scheme_id:
+            query = query.join(ChannelPartner.scheme_channel_partners).filter(
+                SchemeChannelPartner.scheme_id == scheme_id,
+                SchemeChannelPartner.is_active == True,
+                SchemeChannelPartner.is_deleted == False,
+            )
+
+        if country_id:
+            query = query.join(ChannelPartner.state).filter(
+                State.country_id == country_id,
+                State.is_active == True,
+                State.is_deleted == False,
+            )
+
+        if state_id:
+            query = query.filter(ChannelPartner.state_id == state_id)
+
+        if district_id:
+            query = query.filter(ChannelPartner.district_id == district_id)
+
+        return query.distinct().all()
+
 # SchemeChannelPartner Repository
 class SchemeChannelPartnerRepository(BaseRepository[SchemeChannelPartner]):
     def __init__(self, db: Session):

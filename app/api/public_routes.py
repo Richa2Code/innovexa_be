@@ -70,4 +70,23 @@ def calculate_scheme_emi(
     service = PublicService(request, db)
     return service.calculate_emi(payload)
 
+
+@router.get("/channel-partners")
+def list_channel_partners(
+    request: Request,
+    country_id: Optional[str] = Query(None),
+    state_id: Optional[str] = Query(None),
+    district_id: Optional[str] = Query(None),
+    scheme_id: Optional[str] = Query(None),
+    db = Depends(get_db),
+):
+    service = PublicService(request, db)
+    return service.list_channel_partners(
+        country_id=country_id,
+        state_id=state_id,
+        district_id=district_id,
+        scheme_id=scheme_id,
+    )
+
+
 

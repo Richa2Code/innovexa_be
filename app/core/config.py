@@ -46,14 +46,6 @@ class Settings(BaseSettings):
         "enable_decoding": "utf-8",
     }
 
-    # Local Server
-    # model_config = {
-    #     "env_file": f".env.{ServerEnv().ENV}",
-    #     "extra": "ignore",
-    #     "case_sensitive": True,
-    #     "enable_decoding": "utf-8",
-    # }
-
 
 @lru_cache()
 def get_settings():

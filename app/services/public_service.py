@@ -10,6 +10,7 @@ from app.repository.public_repository import (
     StateRepository,
     DistrictRepository,
     SchemeRepository,
+    ChannelPartnerRepository,
 )
 from app.schema.public import (
     CountryResponse,
@@ -36,6 +37,7 @@ class PublicService:
         self.state_repo = StateRepository(db)
         self.district_repo = DistrictRepository(db)
         self.scheme_repo = SchemeRepository(db)
+        self.channel_partner_repo = ChannelPartnerRepository(db)
 
     # Method: Get Countries
     def list_countries(self):
@@ -398,6 +400,38 @@ class PublicService:
             raise
         except Exception as e:
             raise ServerException(str(e))
+
+    # Method: List Channel Partners by scheme_id, country_id, state_id, district_id
+    def list_channel_partners(
+        self,
+        country_id: Optional[str] = None,
+        state_id: Optional[str] = None,
+        district_id: Optional[str] = None,
+        scheme_id: Optional[str] = None,
+    ):
+        try:
+            db_channel_partners = self.channel_partner_repo.get_channel_partners(
+                country_id=country_id,
+                state_id=state_id,
+                district_id=district_id,
+                scheme_id=scheme_id,
+            )
+
+            result = [
+                ChannelPartnerResponse.model_validate(cp).model_dump()
+                for cp in db_channel_partners
+            ]
+
+            return success_response(
+                status_code=http_status.HTTP_200_OK,
+                msg=SuccessMessage.CHANNEL_PARTNERS_FETCHED_SUCCESSFULLY,
+                data=result,
+            )
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise ServerException(str(e))
+
 
 
 

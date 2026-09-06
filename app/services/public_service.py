@@ -152,16 +152,6 @@ class PublicService:
                 district_id=payload.district_id,
             )
 
-            # Fallback if specific purpose search returns empty set
-            if not schemes and payload.purpose:
-                schemes = self.scheme_repo.get_eligible_schemes(
-                    project_cost=payload.project_cost,
-                    annual_income=payload.annual_income,
-                    category=payload.category,
-                    state_id=payload.state_id,
-                    district_id=payload.district_id,
-                )
-
             results = []
             for scheme in schemes:
                 has_location = bool(payload.state_id or payload.district_id)

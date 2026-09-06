@@ -1,5 +1,5 @@
 from typing import Optional, List
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, field_validator
 
 class CountryResponse(BaseModel):
     id: str
@@ -26,12 +26,20 @@ class DistrictResponse(BaseModel):
 
 
 class SchemeEligibilityRequest(BaseModel):
+    purpose: str
     project_cost: Optional[float] = None
     annual_income: Optional[float] = None
     category: Optional[str] = None
-    purpose: Optional[str] = None
     state_id: Optional[str] = None
     district_id: Optional[str] = None
+
+    @field_validator("purpose")
+    @classmethod
+    def validate_purpose(cls, v: str) -> str:
+        allowed = ["Term Loan", "Education Loan", "Micro Finance"]
+        if v not in allowed:
+            raise ValueError(f"purpose must be one of {allowed}")
+        return v
 
 
 class ScoreBreakdown(BaseModel):

@@ -100,7 +100,7 @@ class SchemeListItemResponse(BaseModel):
 
 class SchemeDetailResponse(SchemeListItemResponse):
     repayment_rules: List[RepaymentRuleResponse] = []
-    channel_partners: List[ChannelPartnerResponse] = []
+    # channel_partners: List[ChannelPartnerResponse] = []
 
 
 class EMICalculatorRequest(BaseModel):
@@ -131,4 +131,4 @@ class EMICalculatorResponse(BaseModel):
     schedule: List[EMIScheduleBreakdown] = []
 
 
-
+

@@ -26,6 +26,19 @@ def list_districts(request: Request, state_id: Optional[str] = Query(None), db =
     return service.list_districts(state_id=state_id)
 
 
+@router.get("/schemes")
+def list_schemes(
+    request: Request,
+    skip: int = Query(0, ge=0),
+    limit: int = Query(100, ge=1, le=1000),
+    category: Optional[str] = Query(None),
+    search: Optional[str] = Query(None),
+    db = Depends(get_db),
+):
+    service = PublicService(request, db)
+    return service.list_schemes(skip=skip, limit=limit, category=category, search=search)
+
+
 @router.post("/schemes/eligible")
 def get_eligible_schemes(
     request: Request,

@@ -35,6 +35,7 @@ class SchemeRepository(BaseRepository[Scheme]):
         project_cost: Optional[float] = None,
         annual_income: Optional[float] = None,
         category: Optional[str] = None,
+        purpose: Optional[str] = None,
         state_id: Optional[str] = None,
         district_id: Optional[str] = None,
     ) -> List[Scheme]:
@@ -54,6 +55,15 @@ class SchemeRepository(BaseRepository[Scheme]):
 
         if category:
             query = query.filter(Scheme.category.ilike(f"%{category}%"))
+
+        if purpose:
+            # Flexible filtering so AI engine can score and rank partial purpose matches
+            query = query.filter(
+                Scheme.purpose.ilike(f"%{purpose}%") |
+                Scheme.name.ilike(f"%{purpose}%") |
+                Scheme.category.ilike(f"%{purpose}%") |
+                Scheme.description.ilike(f"%{purpose}%")
+            )
 
         if state_id or district_id:
             query = query.join(Scheme.scheme_channel_partners).join(SchemeChannelPartner.channel_partner)

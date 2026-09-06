@@ -29,9 +29,16 @@ class SchemeEligibilityRequest(BaseModel):
     project_cost: Optional[float] = None
     annual_income: Optional[float] = None
     category: Optional[str] = None
+    purpose: Optional[str] = None
     state_id: Optional[str] = None
     district_id: Optional[str] = None
 
+
+class ScoreBreakdown(BaseModel):
+    purpose_score: float = 0.0
+    income_score: float = 0.0
+    project_cost_score: float = 0.0
+    location_score: float = 0.0
 
 
 class RepaymentRuleResponse(BaseModel):
@@ -75,6 +82,10 @@ class SchemeListItemResponse(BaseModel):
     nsfdc_interest_rate: Optional[float] = None
     beneficiary_interest_rate: Optional[float] = None
     source_url: Optional[str] = None
+    suitability_score: Optional[float] = None
+    suitability_label: Optional[str] = None
+    recommendation_reason: Optional[str] = None
+    score_breakdown: Optional[ScoreBreakdown] = None
 
     model_config = ConfigDict(from_attributes=True)
 

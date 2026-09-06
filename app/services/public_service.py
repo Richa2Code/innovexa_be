@@ -110,18 +110,50 @@ class PublicService:
     # Method: Get Eligible Schemes
     def get_eligible_schemes(self, payload: SchemeEligibilityRequest):
         try:
+            from app.services.ai_eligibility_engine import AIEligibilityEngine
+
             schemes = self.scheme_repo.get_eligible_schemes(
                 project_cost=payload.project_cost,
                 annual_income=payload.annual_income,
                 category=payload.category,
+                purpose=payload.purpose,
                 state_id=payload.state_id,
                 district_id=payload.district_id,
             )
 
+            # Fallback if specific purpose search returns empty set
+            if not schemes and payload.purpose:
+                schemes = self.scheme_repo.get_eligible_schemes(
+                    project_cost=payload.project_cost,
+                    annual_income=payload.annual_income,
+                    category=payload.category,
+                    state_id=payload.state_id,
+                    district_id=payload.district_id,
+                )
 
             results = []
             for scheme in schemes:
-                results.append(SchemeListItemResponse.model_validate(scheme).model_dump())
+                has_location = bool(payload.state_id or payload.district_id)
+                evaluation = AIEligibilityEngine.evaluate_scheme(
+                    scheme=scheme,
+                    user_request=payload,
+                    has_location_match=has_location,
+                )
+
+                if not evaluation["is_eligible"]:
+                    continue
+
+                item_data = SchemeListItemResponse.model_validate(scheme).model_dump()
+                item_data.update({
+                    "suitability_score": evaluation["suitability_score"],
+                    "suitability_label": evaluation["suitability_label"],
+                    "recommendation_reason": evaluation["recommendation_reason"],
+                    "score_breakdown": evaluation["score_breakdown"].model_dump(),
+                })
+                results.append(item_data)
+
+            # Rank schemes descending by suitability score
+            results.sort(key=lambda x: x["suitability_score"] or 0.0, reverse=True)
 
             return success_response(
                 status_code=http_status.HTTP_200_OK,

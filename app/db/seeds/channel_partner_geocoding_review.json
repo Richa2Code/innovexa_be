@@ -1,0 +1,706 @@
+[
+  {
+    "name": "Shri Mahila Sewa Sahakari Bank Ltd.",
+    "latitude": 23.0228015,
+    "longitude": 72.5725537,
+    "provider": "ArcGIS",
+    "query": "109. Sakar-II, Opp. Town Hall, Ellisbridge, Ahmedabad-38006, Ahmedabad, Gujarat, India",
+    "matched_address": "Sakar 2"
+  },
+  {
+    "name": "Streenidhi",
+    "latitude": 17.407883268933,
+    "longitude": 78.471055846252,
+    "provider": "ArcGIS",
+    "query": "401 & 402, 4th Floor, My Home Sarovar Plaza, Secretariat Road, Ambedkar Colony, Saifabad, Hyderabad, Telangana 500004, 500004, India",
+    "matched_address": "Secretariat Road, Khairatabad, Hyderabad, Telangana, 500022"
+  },
+  {
+    "name": "Streenidhi AP",
+    "latitude": 16.5054244,
+    "longitude": 80.6178732,
+    "provider": "ArcGIS",
+    "query": "2nd Floor, NTR Administrative Block, RTC Complex, Vijayawada-520013, Andhra Pradesh, 520013, India",
+    "matched_address": "520013, Bhaskara Rao Pet, Andhra Pradesh"
+  },
+  {
+    "name": "Anik Financial Services Private Limited",
+    "latitude": 18.420228705427,
+    "longitude": 76.571193328107,
+    "provider": "ArcGIS",
+    "query": "Regd. Office: Sahyadri Building, Behind Amitesh Hotel, Ambajogai Road, Sai Naka, Latur – 413512, 413512, India",
+    "matched_address": "Ambajogai Road, Latur, Maharashtra, 413512"
+  },
+  {
+    "name": "Grameen Development & Finance Private Limited",
+    "latitude": 25.96642,
+    "longitude": 91.4193383,
+    "provider": "ArcGIS",
+    "query": "Dubjent, Kulshi Road, Chhaygaon, Kamrup, Assam – 781124, 781124, India",
+    "matched_address": "781124, Palasbari, Assam"
+  },
+  {
+    "name": "ASA International Microfinance Ltd.",
+    "latitude": 22.57128499568,
+    "longitude": 88.430725963987,
+    "provider": "ArcGIS",
+    "query": "Victoria Park, 4th Floor, GN-37/2, Sector-V, Salt Lake City, Kolkata – 700091, West Bengal, 700091, India",
+    "matched_address": "Victoria Park Building, GN/37/2, Salt Lake City, North 24 Parganas, West Bengal, 700091"
+  },
+  {
+    "name": "Midland Microfin Ltd.",
+    "latitude": 31.3260576,
+    "longitude": 75.5756167,
+    "provider": "ArcGIS",
+    "query": "The Axis, Plot No.1, R.B. Badri Dass Colony, BMC Chowk, G.T. Road, Jalandhar – 144001, Punjab, 144001, India",
+    "matched_address": "144001, Jalandhar, Punjab"
+  },
+  {
+    "name": "Satin Creditcare Network Ltdl.",
+    "latitude": 28.5083,
+    "longitude": 77.0693,
+    "provider": "ArcGIS",
+    "query": "Plot No.492, Udyog Vihar, Phase-III, Gurugram, Haryana – 122016, 122016, India",
+    "matched_address": "122016, Udyog Vihar, Sector 22, Sector 21, Gurugram, Haryana"
+  },
+  {
+    "name": "Pahal Financial Services Pvt. Ltd.",
+    "latitude": 23.0364818,
+    "longitude": 72.5052678,
+    "provider": "ArcGIS",
+    "query": "7th Floor, Binori B Square-2, Opp. Hathising Ni Vadi, Ambli-Iscon Road, Ahmedabad – 380054, Gujarat, 380054, India",
+    "matched_address": "380054, Daskroi, Gujarat"
+  },
+  {
+    "name": "Vector Finance PVT LTD",
+    "latitude": 20.2620936,
+    "longitude": 85.7564096,
+    "provider": "ArcGIS",
+    "query": "RO-K7/110, Ground Floor, Klinga Vihar, P.S. Khandagiri, Bhubaneswar, Odisha-751029, 751029, India",
+    "matched_address": "751029, Ghatikia, Odisha"
+  },
+  {
+    "name": "North Eastern Development Finance Corporation Ltd. (NEDFi)",
+    "latitude": 26.1575083,
+    "longitude": 91.7883791,
+    "provider": "ArcGIS",
+    "query": "Tea Auction Center, GS Rd, Sanket Vihar, Dispur, Opposite, Guwahati, Assam 781006, 781006, India",
+    "matched_address": "781006, Dispur, Assam"
+  },
+  {
+    "name": "Jharkhand Silk Textile & Handicraft Development Corporation Ltd. (JHARCRAFT)",
+    "latitude": 23.379220646081,
+    "longitude": 85.314244999792,
+    "provider": "ArcGIS",
+    "query": "Jharcraft, DIC Campus, Ratu Road, Ranchi, Jharkhand 834001, 834001, India",
+    "matched_address": "Ratu Road, Indrapuri Colony, Judge Colony, Ranchi, Jharkhand, 834001"
+  },
+  {
+    "name": "Small Industries Development Bank of India (SIDBI)",
+    "latitude": 26.867730001392,
+    "longitude": 80.957003841622,
+    "provider": "ArcGIS",
+    "query": "SIDBI Tower, 15, Ashok Marg, Lucknow - 226001, Uttar Pradesh, 226001, India",
+    "matched_address": "15 Ashok Marg, Balmikinagar, Lucknow, Uttar Pradesh, 226006"
+  },
+  {
+    "name": "Indian Overseas Bank",
+    "latitude": 13.063111746925,
+    "longitude": 80.264379655605,
+    "provider": "ArcGIS",
+    "query": "Central Office, 763, Anna Salai, Chennai, Tamil Nadu – 600002, 600002, India",
+    "matched_address": "Anna Salai, Thousand Lights, Chennai, Tamil Nadu, 600002"
+  },
+  {
+    "name": "Bank of Baroda",
+    "latitude": 22.3059652,
+    "longitude": 73.1474071,
+    "provider": "ArcGIS",
+    "query": "Baroda Bhavan, 7th Floor, R.C. Dutt Road, Vadodara – 390007, Gujarat, 390007, India",
+    "matched_address": "390007, Saiyed Vasna, Gujarat"
+  },
+  {
+    "name": "Canara Bank",
+    "latitude": 12.957143985181,
+    "longitude": 77.581584024048,
+    "provider": "ArcGIS",
+    "query": "Head Office, 112, J.C. Road, Bengaluru – 560002, 560002, India",
+    "matched_address": "11-2 J C Road, Kalasipalayam, Bangalore, Karnataka, 560002"
+  },
+  {
+    "name": "Punjab National Bank",
+    "latitude": 28.58308698916,
+    "longitude": 77.058416976155,
+    "provider": "ArcGIS",
+    "query": "Plot No.-4, Sector 10, Dwarka, New Delhi – 110075, 110075, India",
+    "matched_address": "4 Sekṭar 10 Roḍ, Dvārkā, Dwarka, Sāuth Vesṭ Dillī, Dillī, 110075"
+  },
+  {
+    "name": "Punjab & Sind Bank",
+    "latitude": 28.6448,
+    "longitude": 77.1774,
+    "provider": "ArcGIS",
+    "query": "Priority Sector Advance Department, 5th Floor, 21 Rajendra Place, New Delhi – 110008, 110008, India",
+    "matched_address": "110008, Rajendra Place, Karol Bagh, Central Delhi, Delhi"
+  },
+  {
+    "name": "Union Bank of India",
+    "latitude": 18.9259184,
+    "longitude": 72.8245311,
+    "provider": "ArcGIS",
+    "query": "Rural & Agri Business Department, Central Office, Union Bank Bhavan, Nariman Point, Mumbai – 400, Mumbai City, Maharashtra, India",
+    "matched_address": "Nariman Point, Mumbai, Maharashtra"
+  },
+  {
+    "name": "Indian Bank",
+    "latitude": 13.049614985031,
+    "longitude": 80.260404991107,
+    "provider": "ArcGIS",
+    "query": "Corporate Office, No.254-260, Avvai Shanmugam Salai, Gowdi Mutt Road, Royapettah, Chennai – 600014, 600014, India",
+    "matched_address": "254 Avvai Shanmugam Salai, Gopalapuram, Chennai, Tamil Nadu, 600014"
+  },
+  {
+    "name": "Bank of Maharashtra",
+    "latitude": 18.5245601,
+    "longitude": 73.8527805,
+    "provider": "ArcGIS",
+    "query": "Head Office Lok Mangal, 1501, Shivajinagar, Pune-411005, Maharashtra, 411005, India",
+    "matched_address": "411005, Shivaji Nagar, Maharashtra"
+  },
+  {
+    "name": "Bank of India",
+    "latitude": 19.0604,
+    "longitude": 72.8624,
+    "provider": "ArcGIS",
+    "query": "Bandra Kurla Complex, Bandra (East), Mumbai-400051, 400051, India",
+    "matched_address": "400051, Bandra Kurla Complex, Bandra East, Andheri, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "name": "Central Bank of India",
+    "latitude": 18.926986590459,
+    "longitude": 72.821586035575,
+    "provider": "ArcGIS",
+    "query": "Chandermukhi Building, Nariman Point, Mumbai – 400021, 400021, India",
+    "matched_address": "Chandramukhi Building, Swatantreysenani Ramnath Goenka Marg, Nariman Point, Mumbai, Maharashtra, 400021"
+  },
+  {
+    "name": "UCO Bank",
+    "latitude": 22.5908414,
+    "longitude": 88.419626,
+    "provider": "ArcGIS",
+    "query": "No. 3&4, DD Block, Sector-1, Bidhannagar, Kolkata, West Bengal-700064, 700064, India",
+    "matched_address": "700064, Salt Lake City, West Bengal"
+  },
+  {
+    "name": "Bihar Gramin Bank",
+    "latitude": 25.6104242,
+    "longitude": 85.1635089,
+    "provider": "ArcGIS",
+    "query": "Shri Vishnu Commercial Complex, NH-30, New Bypass, Near BP Highway Services Petrol Pump, Asochak, Patna - 800016, 800016, India",
+    "matched_address": "800016, Rajendra Nagar, Bihar"
+  },
+  {
+    "name": "Maharashtra Gramin Bank",
+    "latitude": 19.877924988921,
+    "longitude": 75.360972031653,
+    "provider": "ArcGIS",
+    "query": "Plot No.35, Jeewan Shri Town Centre, CIDCO, Aurangabad, Maharashtra – 431003, 431003, India",
+    "matched_address": "Jivanshri, SSI Cidco Road, CIDCO Kennauṭ, CIDCO Cannought, Chhatrapati Sambhajinagar, Maharashtra, 431003"
+  },
+  {
+    "name": "Jharkhand Gramin Bank",
+    "latitude": 23.3699039,
+    "longitude": 85.3252764,
+    "provider": "ArcGIS",
+    "query": "Zila Parishad Market Complex, 3rd Floor, Kutchery Road, Ranchi-834001, Jharkhand, 834001, India",
+    "matched_address": "834001, Ranchi, Jharkhand"
+  },
+  {
+    "name": "Haryana Gramin Bank",
+    "latitude": 28.891858,
+    "longitude": 76.603214,
+    "provider": "ArcGIS",
+    "query": "Near Bajrang Bhawan, Delhi Road, Rohtak, Haryana – 124001, 124001, India",
+    "matched_address": "Bajrang Bhawan"
+  },
+  {
+    "name": "Gujarat Gramin Bank",
+    "latitude": 24.173133,
+    "longitude": 72.432361,
+    "provider": "ArcGIS",
+    "query": "Head Office, Sky Line Building, 2nd Floor, Near Shital Guest House, Bharuch - 392001, Gujarat, 392001, India",
+    "matched_address": "Sheetal Guest House"
+  },
+  {
+    "name": "Telangana Grameena Bank",
+    "latitude": 17.3983,
+    "longitude": 78.5089,
+    "provider": "ArcGIS",
+    "query": "H.No.2-1-520, 2nd Floor, Vijaya Sri Sai Celestia, Street No.9, Shankermut Road, Nallakunta, Hyderabad, Telangana – 500044, 500044, India",
+    "matched_address": "500044, Nallakunta, Bagh Amberpet, Hyderabad, Telangana"
+  },
+  {
+    "name": "Rajasthan Gramin Bank",
+    "latitude": 26.277604625466,
+    "longitude": 73.004143377131,
+    "provider": "ArcGIS",
+    "query": "Tulsi Tower, 9th B Road, Sardarpura, Jodhpur – 342003, Rajasthan, 342003, India",
+    "matched_address": "9th B Road, Sardarpura, Jodhpur, Rajasthan, 342003"
+  },
+  {
+    "name": "Uttar Pradesh Gramin Bank",
+    "latitude": 26.867892408604,
+    "longitude": 80.953466402717,
+    "provider": "ArcGIS",
+    "query": "2nd & 3rd Floor, NBCC Commercial Complex, Vardan Khand, Gomti Nagar Extension, Lucknow–229001, Uttar Pradesh, 229001, India",
+    "matched_address": "2nd Lane & 3rd Lane, Hasanganj, Nishat Ganj, Lucknow, Uttar Pradesh, 226007"
+  },
+  {
+    "name": "Kerala Grameena Bank",
+    "latitude": 11.0421113,
+    "longitude": 76.0773977,
+    "provider": "ArcGIS",
+    "query": "PB No.10, KGPB Towers, AK Road, Uphill, Malappuram, Kerala – 676505, 676505, India",
+    "matched_address": "Kgb Tower"
+  },
+  {
+    "name": "Uttarakhand Gramin Bank",
+    "latitude": 30.408433218146,
+    "longitude": 78.087355427083,
+    "provider": "ArcGIS",
+    "query": "18-New Road, Dehradun, Uttarakhand, Dehradun, Uttarakhand, India",
+    "matched_address": "Dehradun Road, Bhagwantpur, Dehradun, Uttarakhand, 248009"
+  },
+  {
+    "name": "Tripura Gramin Bank",
+    "latitude": 23.8338203,
+    "longitude": 91.2824216,
+    "provider": "ArcGIS",
+    "query": "H.O. Airport Road, PO Abhaynagar, Agartala, Tripura (W) Pin – 799005, 799005, India",
+    "matched_address": "Agartala, West Tripura, Tripura"
+  },
+  {
+    "name": "Karnataka Grameena Bank",
+    "latitude": 12.3310204,
+    "longitude": 76.5988436,
+    "provider": "ArcGIS",
+    "query": "Head Office, CA 20, Vijayanagar IInd Stage, Musure – 570017 (Karnataka), 570017, India",
+    "matched_address": "570017, Vijayanagar, Karnataka"
+  },
+  {
+    "name": "Assam Gramin Bank",
+    "latitude": 26.163782509746,
+    "longitude": 91.770121042304,
+    "provider": "ArcGIS",
+    "query": "HO, G.S. Road, Bhangagarh, Guwahati-781005, Assam, 781005, India",
+    "matched_address": "G S Road, Bhangagarh, Dispur, Kamrup Metropolitan, Assam, 781005"
+  },
+  {
+    "name": "Andhra Pradesh Grameena Bank",
+    "latitude": 16.3022227,
+    "longitude": 80.4389295,
+    "provider": "ArcGIS",
+    "query": "4th Floor, Raghu Mansion, 4-1, Broadipet, Guntur - 522002, Andhra Pradesh, 522002, India",
+    "matched_address": "Raghu Mansion"
+  },
+  {
+    "name": "Punjab Gramin Bank",
+    "latitude": 31.384333912172,
+    "longitude": 75.30281124687,
+    "provider": "ArcGIS",
+    "query": "HO Jalandhar Road, Kapurthala – 144601, Punjab, 144601, India",
+    "matched_address": "Jalandhar Road, Adnawali, Kapurthala, Punjab, 144601"
+  },
+  {
+    "name": "Tamil Nadu Grama Bank",
+    "latitude": 11.681484786009,
+    "longitude": 78.161149015234,
+    "provider": "ArcGIS",
+    "query": "6, Yercaud Road, Hasthasmpatti, Salem – 636007, Tamil Nadu, 636007, India",
+    "matched_address": "Yercaud Road, Hasthampatti, Salem, Tamil Nadu, 636007"
+  },
+  {
+    "name": "Madhaya Pradesh Gramin Bank",
+    "latitude": 22.7570343,
+    "longitude": 75.8653678,
+    "provider": "ArcGIS",
+    "query": "C21, Business Park, C21 Square opposite Hotel Radisson Blue, MR-10, Indore-452010, Madhaya Pradesh, 452010, India",
+    "matched_address": "452010, Ward 7, Madhya Pradesh"
+  },
+  {
+    "name": "Himachal Pradesh Gramin Bank",
+    "latitude": 31.6819,
+    "longitude": 76.9155,
+    "provider": "ArcGIS",
+    "query": "Jail Road (Panjethi), PO – Talyahar, Mandi 175001, Himachal Pradesh, 175001, India",
+    "matched_address": "175001, Tāliāhar, Mandi, Maṅḍī, Himaachal Pradesh"
+  },
+  {
+    "name": "Puducherry Grama Bank",
+    "latitude": 11.930943220822,
+    "longitude": 79.828397510493,
+    "provider": "ArcGIS",
+    "query": "No.441, Mahatma Gandhi Road, Muthialpet, Puducherry – 605003, 605003, India",
+    "matched_address": "441 Mahatma Gandhi Road, MG Road Area, Hosrice, Puducherry, 605001"
+  },
+  {
+    "name": "West Bengal Gramin Bank",
+    "latitude": 22.5950964,
+    "longitude": 88.3188091,
+    "provider": "ArcGIS",
+    "query": "Natabar Paul Road, Chatterjee Para More, Tikiapara, Howrah – 711101 (WB), 711101, India",
+    "matched_address": "Natabar Paul Road Shiv Mandir, Chatteergee Para"
+  },
+  {
+    "name": "Chhattisgarh Gramin Bank",
+    "latitude": 21.2063086,
+    "longitude": 81.6357125,
+    "provider": "ArcGIS",
+    "query": "Corporate Office Raipur, Plot No.-47, Sector-24, Atal Nagar, Nava Raipur-492013, 492013, India",
+    "matched_address": "492013, New Rajendra Nagar, Chhattisgarh"
+  },
+  {
+    "name": "Manipur Rural Bank",
+    "latitude": 24.8021535,
+    "longitude": 93.938618,
+    "provider": "ArcGIS",
+    "query": "Keishampat, Keisham Leikai, Imphal, Manipur 795001, 795001, India",
+    "matched_address": "795001, Imphal, Manipur"
+  },
+  {
+    "name": "Meghalaya Rural Bank",
+    "latitude": 25.5767,
+    "longitude": 91.8833,
+    "provider": "ArcGIS",
+    "query": "M.T.C Building, 2nd Floor, Police Bazar, Shillong-793001, 793001, India",
+    "matched_address": "793001, Police Bazar, Shillong, East Khasi Hills, Meghalaya"
+  },
+  {
+    "name": "J&K Grameen Bank",
+    "latitude": 32.65466,
+    "longitude": 74.93246,
+    "provider": "ArcGIS",
+    "query": "Near Fruit Complex, Narwal, Jammu (J&K) - 180006, 180006, India",
+    "matched_address": "Narwāl, Jammu, Jammu and Kashmīr"
+  },
+  {
+    "name": "Odisha Grameen Bank",
+    "latitude": 20.2588766,
+    "longitude": 85.7884789,
+    "provider": "ArcGIS",
+    "query": "7R25-H75, Jagamara, Sunderpada Road, Gandamuda, Pokhhariput, Bhubaneswar-751030, Odisha, 751030, India",
+    "matched_address": "751030, Khandagiri, Odisha"
+  },
+  {
+    "name": "Mizoram Rural Bank",
+    "latitude": 23.7308931,
+    "longitude": 92.7163494,
+    "provider": "ArcGIS",
+    "query": "MINECO, Khatla, Aizawl - 796001, 796001, India",
+    "matched_address": "796001, Aizawl, Mizoram"
+  },
+  {
+    "name": "Andhra Pradesh Scheduled Castes Cooperative Finance Corporation Ltd. (APSCCFC)",
+    "latitude": 16.4906765,
+    "longitude": 80.5844145,
+    "provider": "ArcGIS",
+    "query": "SP River View Apartments, 3rd Floor, Tadepalli, Amaravathi – 522501, 522501, India",
+    "matched_address": "522501, Penumaka, Andhra Pradesh"
+  },
+  {
+    "name": "Andhra Pradesh State Financial Corporation (APSFC)",
+    "latitude": 16.505029692416,
+    "longitude": 80.67718715087,
+    "provider": "ArcGIS",
+    "query": "APSFC Building, Plot OS No.2, 2nd Cross, 3rd Road, Industrial Park, Vijayawada – 520007, 520007, India",
+    "matched_address": "3rd Road, Sri Ramchandra Nagar, Krishna, Andhra Pradesh, 520007"
+  },
+  {
+    "name": "Assam State Development Corporation for SCs Ltd. (ASCDC)",
+    "latitude": 26.146546973215,
+    "longitude": 91.796872046697,
+    "provider": "ArcGIS",
+    "query": "Swahid Dilip Hozori Path, Sarumotoria, Dispur, Guwahati – 781006, 781006, India",
+    "matched_address": "Shahid Dilip Huzuri Path, Sarumotoria, Dispur, Kamrup Metropolitan, Assam, 781005"
+  },
+  {
+    "name": "Bihar State SCs Co-operative Development Corporation Ltd. (BSSCCDC)",
+    "latitude": 25.610648225894,
+    "longitude": 85.126325351366,
+    "provider": "ArcGIS",
+    "query": "RN-212, Officers Colony (Block-A), Bailey Road, Patna – 800001, 800001, India",
+    "matched_address": "Bailey Road, Kidwaipur Postal Colony, Patna, Bihar, 800001"
+  },
+  {
+    "name": "Chandigarh SCs, BCs & Minorities Financial & Development Corporation Ltd. (CSCFDC)",
+    "latitude": 30.7444,
+    "longitude": 76.7858,
+    "provider": "ArcGIS",
+    "query": "3rd Floor, Additional Town Hall Building, Sector-17-C, Chandigarh-160017, 160017, India",
+    "matched_address": "160017, Sector 17, Sector 17A, Chandigarh"
+  },
+  {
+    "name": "Chhatisgarh State Antavasayee Sahkari Fin. & Dev. Corpn. (CGSCFDC)",
+    "latitude": 21.222768,
+    "longitude": 81.813425,
+    "provider": "ArcGIS",
+    "query": "4th Floor, Business Complex, Chhattisgarh Housing Board Bhawan, Naya Raipur, Chhattisgarh - 492101, 492101, India",
+    "matched_address": "492101, Arang, Chhattisgarh"
+  },
+  {
+    "name": "Dadra & Nagar Haveli, Daman & Diu SCs/STs/OBCs & Minorities Financial & Development Corporation (DNDSFDC)",
+    "latitude": 20.318729321399,
+    "longitude": 72.966218623984,
+    "provider": "ArcGIS",
+    "query": "Ground Floor, Right Wing, New Collectorate Building, Near Electricity Department, Opp. 66 KVA Sub-Station, 66 KVA Road, Silvassa – 396230, 396230, India",
+    "matched_address": "Silvasa Road, Old Town, Koliwara, Dadra And Nagar Haveli, Dadra and Nagar Haveli and Daman and Diu, 396193"
+  },
+  {
+    "name": "Delhi SC/ST/OBC/Minorities & Handicapped Financial & Development Corporation (DSFDC)",
+    "latitude": 28.734992,
+    "longitude": 77.114687,
+    "provider": "ArcGIS",
+    "query": "Ambedkar Bhawan, Sector-16, Opp. Sector-11, Rohini, Delhi – 110085, 110085, India",
+    "matched_address": "Ambedkar Bhavan"
+  },
+  {
+    "name": "Gujarat SCs Development Corporation (GSCDC)",
+    "latitude": 23.2233468,
+    "longitude": 72.6477057,
+    "provider": "ArcGIS",
+    "query": "Dr Jivraj Mehta Bhawan, Block-10, II Floor, Old Sachivalaya, Gandhinagar – 382010, 382010, India",
+    "matched_address": "382010, Gandhinagar, Gujarat"
+  },
+  {
+    "name": "Dr. Ambedkar Antyodaya Vikas Nigam (S.C.) (DAAVN)",
+    "latitude": 22.277621916625,
+    "longitude": 70.786871496023,
+    "provider": "ArcGIS",
+    "query": "Karmayogi Bhavan, Block No.2, D-2 Wing, 4th Floor, Sector-10/B, Gandhinagar, Gujarat, Gandhinagar, Gujarat, India",
+    "matched_address": "Karmyog House, Road No 2, Chandreshnagar, Narmada Park, Rajkot, Gujarat, 360004"
+  },
+  {
+    "name": "Goa State SCs & OBCs Finance and Development Corporation Ltd. (GSCOBCDC)",
+    "latitude": 15.496951,
+    "longitude": 73.835752,
+    "provider": "ArcGIS",
+    "query": "4th Floor, Patto Centre, Near K.T.C. Bus Stand, Panaji, Goa – 403001, 403001, India",
+    "matched_address": "Patto Center"
+  },
+  {
+    "name": "Haryana SCs Fin. and Development Corporation Ltd. (HSCDC)",
+    "latitude": 30.7333502,
+    "longitude": 76.7790361,
+    "provider": "ArcGIS",
+    "query": "SCO-2427-28, Sector 22-C, Chandigarh – 160022, 160022, India",
+    "matched_address": "160022, Chandigarh"
+  },
+  {
+    "name": "Himachal Pradesh SCs & STs Development Corporation (HPSCSTDC)",
+    "latitude": 30.9003871,
+    "longitude": 77.1237508,
+    "provider": "ArcGIS",
+    "query": "Kalyan Bhawan, Near Ambusha Resort, Solan – 173212, 173212, India",
+    "matched_address": "173212, Solan, Himachal Pradesh"
+  },
+  {
+    "name": "Jharkhand State Scheduled Castes Cooperative Development Corporation (JSCDC)",
+    "latitude": 23.4067,
+    "longitude": 85.3358,
+    "provider": "ArcGIS",
+    "query": "Kalyan Complex, 3rd Floor, Balihar Road, Morabadi, Ranchi-834008, 834008, India",
+    "matched_address": "834008, Morabadi, Barkatoli, Ranchi, Jharkhand"
+  },
+  {
+    "name": "J&K SCs, STs & OBCs Dev. Corpn. Ltd. (JKSCSTBCDC)",
+    "latitude": 32.739803752682,
+    "longitude": 74.864763659599,
+    "provider": "ArcGIS",
+    "query": "Exchange Road, Near Red Cross Office, Srinagar – 190001 (Office: May to October) & 135-A, Last Morh, Gandhi Nagar, Jammu -180004 (Office: November to April), Jammu & Kashmir, India",
+    "matched_address": "Exchange Road, Jammu Village, Kachi Chawni, Jammu, Jammu and Kashmir, 180001"
+  },
+  {
+    "name": "Dr B. R. Ambedkar Development Corporation Ltd. (DBRADC)",
+    "latitude": 12.9800218,
+    "longitude": 77.5927429,
+    "provider": "ArcGIS",
+    "query": "9th & 10th Floor, Visheshwariah Mini Tower, Dr Ambedkar Veedhi, Bengaluru – 560001, 560001, India",
+    "matched_address": "560001, Bengaluru North, Karnataka"
+  },
+  {
+    "name": "Kerala State Development Corporation for SCs & STs Ltd. (KSDC)",
+    "latitude": 10.530858646504,
+    "longitude": 76.220412870999,
+    "provider": "ArcGIS",
+    "query": "Town Hall Road, Thrissur – 680020, 680020, India",
+    "matched_address": "Town Hall Road, Chembukkav, Thrissur, Kerala, 680020"
+  },
+  {
+    "name": "Kerala State Women's Development Corporation (KSWDC)",
+    "latitude": 8.47796,
+    "longitude": 76.947,
+    "provider": "ArcGIS",
+    "query": "1st Floor, Transport Bhavan, KSRTC Building, East Fort, Attakulangara-695023, 695023, India",
+    "matched_address": "695023, Attakulangara, Manacaud, Thiruvananthapuram, Kerala"
+  },
+  {
+    "name": "MP State Cooperative SC Finance & Development Corporation (MPSCFDC)",
+    "latitude": 23.241151107122,
+    "longitude": 77.389801301709,
+    "provider": "ArcGIS",
+    "query": "Rajiv Gandhi Bhawan, 35, Shyamala Hills, Bhopal – 462011, 462011, India",
+    "matched_address": "Rajeev Gandhi Bhawan, 35/1 Mantri Bunglow Road, Shymala Hills, T T Nagar, Bhopal, Madhya Pradesh, 462002"
+  },
+  {
+    "name": "Mahatma Phule BCs Development Corporation Ltd. (MPBCDC)",
+    "latitude": 19.1155201,
+    "longitude": 72.8275956,
+    "provider": "ArcGIS",
+    "query": "1-N, Supreme Shopping Centre, Gulmohar Cross Road No.9, J.V.P.D. Scheme, Juhu, Mumbai – 400049, 400049, India",
+    "matched_address": "400049, Juhu, Maharashtra"
+  },
+  {
+    "name": "Sahityaratna Lokshahir Annabhau Sathe Development Corporation Ltd. (SLASDC)",
+    "latitude": 19.05231611759,
+    "longitude": 72.894287310957,
+    "provider": "ArcGIS",
+    "query": "New Administration Building No.2, 3rd Floor, Ramkrushna Chemburkar Marg, Chembur (E), Mumbai – 400071, 400071, India",
+    "matched_address": "2 Ramkrishna Chemburkar Marg, Chembur, Mumbai Suburban, Maharashtra, 400071"
+  },
+  {
+    "name": "Sant Rohidas Leather Industries & Charmakar Development Corporation (LIDCOM)",
+    "latitude": 18.932039411241,
+    "longitude": 72.832464237154,
+    "provider": "ArcGIS",
+    "query": "Bombay Life Building, 5th Floor, 45, Veer Nariman Road, Mumbai – 400001, 400001, India",
+    "matched_address": "Bombay Life Building, Veer Nariman Road, Hutatma Chowk Flora Fountain, Mumbai, Maharashtra, 400001"
+  },
+  {
+    "name": "Manipur Tribal Development Corporation Ltd. (MTDC)",
+    "latitude": 24.81,
+    "longitude": 93.9041,
+    "provider": "ArcGIS",
+    "query": "Lamphelpat, Imphal – 795004, 795004, India",
+    "matched_address": "795004, Lamphelpat, Lamphel, Imphal West, Manipur"
+  },
+  {
+    "name": "Manipur SCs & STs Co-operative Dev. Bank (MSTCB)",
+    "latitude": 24.8021535,
+    "longitude": 93.938618,
+    "provider": "ArcGIS",
+    "query": "Nambun Long, Stadium Road, Imphal East, Manipur-795001, 795001, India",
+    "matched_address": "795001, Imphal, Manipur"
+  },
+  {
+    "name": "Meghalaya Cooperative Apex Bank Ltd. (MCAB)",
+    "latitude": 25.5897217,
+    "longitude": 91.9052768,
+    "provider": "ArcGIS",
+    "query": "M.G. Road, Kutchery, Shillong – 793001, 793001, India",
+    "matched_address": "793001, Nehu Vistar, Meghalaya"
+  },
+  {
+    "name": "Mizoram Urban Cooperative Development Bank Ltd. (MUCO Bank)",
+    "latitude": 23.7342,
+    "longitude": 92.7171,
+    "provider": "ArcGIS",
+    "query": "Lawlsawmiliani Building (Top Floor), Zarkawt, Aizwal -796001, 796001, India",
+    "matched_address": "796001, Zarkawt, Aizawl, Mizoram"
+  },
+  {
+    "name": "Mizoram Khadi & Village Industries & Board (MKVIB)",
+    "latitude": 23.7354,
+    "longitude": 92.7186,
+    "provider": "ArcGIS",
+    "query": "\"Zorun\" Zarkawt, Aizwal -796007, 796007, India",
+    "matched_address": "796007, Zarkawt, Aizawl, Mizoram"
+  },
+  {
+    "name": "Odisha SCs & STs Dev. Finance Co-op. Corpn. Ltd. (OSFDC)",
+    "latitude": 20.227732895676,
+    "longitude": 85.841133682395,
+    "provider": "ArcGIS",
+    "query": "Lewis Road, Bhubaneshwar – 751014, 751014, India",
+    "matched_address": "Lewis Road, Dhauli, Bhubaneswar, Khordha, Odisha, 751002"
+  },
+  {
+    "name": "Puducherry Adi Dravidar Dev. Corpn. Ltd. (PADCO)",
+    "latitude": 11.9447,
+    "longitude": 79.8051,
+    "provider": "ArcGIS",
+    "query": "III Floor, Directorate of Adi Dravidar Welfare Department, Thattanchavady, Puducherry -605009, 605009, India",
+    "matched_address": "605009, Thattanchavady, Ozhukarai, Puducherry"
+  },
+  {
+    "name": "Punjab Scheduled Castes Land Development & Finance Corporation (PSCLDFC)",
+    "latitude": 30.7444,
+    "longitude": 76.7858,
+    "provider": "ArcGIS",
+    "query": "SCO No.101-102-103, Sector 17-C, Chandigarh – 160017, 160017, India",
+    "matched_address": "160017, Sector 17, Sector 17A, Chandigarh"
+  },
+  {
+    "name": "Rajasthan SCs & STs Fin. & Dev. Co-op. Corporation Ltd. (RSCDC)",
+    "latitude": 26.901571013453,
+    "longitude": 75.793626008459,
+    "provider": "ArcGIS",
+    "query": "III Floor, Central Block, Nehru Sahakar Bhawan, Bhawani Singh Marg, Jaipur–302005, 302005, India",
+    "matched_address": "Neharu Sahakar Bhawan, Bhawani Singh Road, Lal Kothi, Jaipur, Rajasthan, 302015"
+  },
+  {
+    "name": "Sikkim Scheduled Castes Scheduled Tribes & Backward Classes Development Corporation (SSCSTBCDC)",
+    "latitude": 27.3466393,
+    "longitude": 88.606717,
+    "provider": "ArcGIS",
+    "query": "Bhanupath, Gangtok, Sikkim – 737101, 737101, India",
+    "matched_address": "737101, Gangtok, Sikkim"
+  },
+  {
+    "name": "Tamil Nadu Adi Dravidar Housing & Development Corporation Ltd. (TAHDCO)",
+    "latitude": 13.030189971068,
+    "longitude": 80.245858163965,
+    "provider": "ArcGIS",
+    "query": "No.31, Cenotaph Road, 2nd Lane, Teynamtet, Chennai -600018, 600018, India",
+    "matched_address": "Cenotaph Road, Alwarpet, Teynampet, Chennai, Tamil Nadu, 600018"
+  },
+  {
+    "name": "Tripura Scheduled Castes Co-op. Devp. Corpn. Ltd. (TSCDC)",
+    "latitude": 23.8347,
+    "longitude": 91.2752,
+    "provider": "ArcGIS",
+    "query": "Krishna Nagar P.O. Lake Chomubani, Agartala – 799001, 799001, India",
+    "matched_address": "799001, Krishna Nagar, Agartala, West Tripura, Tripura"
+  },
+  {
+    "name": "Uttarakhand Bahu-udeshiya Vitta Evam Vikas Nigam (UBVEVN)",
+    "latitude": 30.3206,
+    "longitude": 78.061,
+    "provider": "ArcGIS",
+    "query": "Janjati Directorate, New Building, Bhagat Singh Colony (Adhoiwala), Dehradun-248001, 248001, India",
+    "matched_address": "248001, Adhoiwala, Dehradun, Uttarakhand"
+  },
+  {
+    "name": "UP Sahkari Gram Vikas Bank Ltd.",
+    "latitude": 26.8387,
+    "longitude": 80.9507,
+    "provider": "ArcGIS",
+    "query": "10, Mall Avenue, Lucknow, Uttar Pradesh-226001, 226001, India",
+    "matched_address": "226001, The Mall Avenue, Lucknow, Uttar Pradesh"
+  },
+  {
+    "name": "UP Scheduled Castes Finance & Dev. Corpn. Ltd. (UPSCFDC)",
+    "latitude": 26.871802661047,
+    "longitude": 80.964231969612,
+    "provider": "ArcGIS",
+    "query": "B-912, Sector-C, Mahanagar, Lucknow – 226006, 226006, India",
+    "matched_address": "Sector B Road, Mahanagar Colony, Badshah Nagar, Lucknow, Uttar Pradesh, 226006"
+  },
+  {
+    "name": "West Bengal SCs, STs & OBC Development & Finance Corporation (WBSCSTOBCDFC)",
+    "latitude": 22.5908414,
+    "longitude": 88.419626,
+    "provider": "ArcGIS",
+    "query": "CF 217/A/1 Salt Lake, Sector-I, (Mangolic Building), Kolkata – 700064, 700064, India",
+    "matched_address": "700064, Salt Lake City, West Bengal"
+  }
+]

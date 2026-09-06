@@ -225,7 +225,7 @@ class PublicService:
             response_data = SchemeDetailResponse(
                 **base_info,
                 repayment_rules=repayment_rules,
-                channel_partners=channel_partners,
+                # channel_partners=channel_partners,
             ).model_dump()
 
             return success_response(
